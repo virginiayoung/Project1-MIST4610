@@ -164,3 +164,7 @@ and Worker.role in ("Cinematographer");
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
 results?)
+
+# Database Information:
+<img width="1142" alt="Screenshot 2024-10-13 at 7 21 28 PM" src="https://github.com/user-attachments/assets/e4d150a6-5626-4350-94c2-b8c6345bab04">
+
