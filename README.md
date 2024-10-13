@@ -30,9 +30,7 @@ where mentor.firstName = 'Leonardo' and mentor.lastName = 'DiCaprio';
 
 <img width="444" alt="Screenshot 2024-10-13 at 5 52 13 PM" src="https://github.com/user-attachments/assets/0c533dcb-5649-425f-a325-7ef6af12757c">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Tracking which movies Leonardo DiCaprio's mentees have acted in and the roles they played allows a manager to evaluate the influence of mentorship on their career development. The data assists in planning future collaborations to help mentees reach new milestones in their careers and informs us which actors use Leonardo DiCaprio as their mentor.
 
 # Find the highest rated movies based on average review scores from all sources
 select movieName, avg(Rating.score) as average_rating
@@ -43,9 +41,7 @@ order by average_rating desc;
 
 <img width="188" alt="Screenshot 2024-10-13 at 5 52 44 PM" src="https://github.com/user-attachments/assets/2f738bf6-9aef-4140-b76d-bc2225b9b74d">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Identifying the highest-rated movies based on average review scores from all sources allows a manager to recognize films that have achieved success across audiences and reviewers. This information helps in making strategic decisions about potential future films that have lasting appeal and credibility in the industry.
 
 # Find the total box office revenue generated for each movie, including number of tickets sold and average ticket price
 select movieName, sum(ticketsSold * ticketPrice) as total_revenue, avg(ticketPrice) as avg_ticket_price, sum(ticketsSold) as total_tickets_sold
@@ -56,9 +52,7 @@ group by movieName;
 
 <img width="365" alt="Screenshot 2024-10-13 at 5 53 05 PM" src="https://github.com/user-attachments/assets/5a216c9d-d392-4195-b986-c947d36b6745">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Calculating the total box office revenue for each movie along with the number of tickets sold and the average ticket price gives a manager comprehensive insights into a film's financial performance. This data helps assess the film's profitability, providing key information for making future movie decisions.
 
 # Find the Streaming Platforms that have action movies and the amount
 select platformName, count(Movie.idMovie) as movie_count
@@ -72,9 +66,7 @@ order by movie_count desc;
 
 <img width="165" alt="Screenshot 2024-10-13 at 5 53 26 PM" src="https://github.com/user-attachments/assets/eb484fa1-79b4-4971-a181-006611dfaf52">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Identifying streaming platforms that offer action movies, along with the number of titles available, is essential for a manager to understand market trends in the genre and which streaming platforms offer the most action movies. This information helps in making strategic decisions about partnerships and additionally helps movie producers in terms of which streaming platforms they might want their new action movie on.
 
 # Count the number of movies directed by each director only including directors that have directed more than 1 movie
 select firstName, lastName, count(Movie.idMovie) as movie_count
@@ -86,9 +78,7 @@ order by movie_count desc;
 
 <img width="212" alt="Screenshot 2024-10-13 at 5 53 39 PM" src="https://github.com/user-attachments/assets/d6916f5d-02b6-4aef-9309-fb9b1ae15ef6">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Counting the number of movies directed by directors with more than one film helps a manager identify which directors have proven success in the movie industry. This data can help when selecting directors for future projects, since directors with multiple films are more likely to have experience managing productions which can deliver successful results.
 
 # Which movie genres have an average rating greater than 70, and what are the individual movies within those genres along with their average ratings
 select genreName, movieName, avg(Rating.score) as average_rating
@@ -101,9 +91,7 @@ order by genreName, average_rating desc;
 
 <img width="250" alt="Screenshot 2024-10-13 at 5 54 37 PM" src="https://github.com/user-attachments/assets/c86ddb29-ce14-4d9b-9289-3f5083529bf5">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Identifying movie genres with an average rating above 70, along with the individual movies and their ratings, is valuable for a manager because it highlights successful genres and films within those categories. This data helps in making informed decisions about future projects, which allows managers to focus on genres that are successful in terms of ratings.
 
 # List all the movies that feature Leonardo DiCaprio, along with his role name and total revenue
 select firstName, lastName, movieName, roleName, sum(ticketsSold * ticketPrice) as total_revenue
@@ -117,9 +105,7 @@ having firstName = "Leonardo" and lastName = "DiCaprio";
 
 <img width="384" alt="Screenshot 2024-10-13 at 5 54 55 PM" src="https://github.com/user-attachments/assets/93a0a360-88fa-448d-8ea2-bb6badcd1da9">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Listing all movies featuring Leonardo DiCaprio, along with his role name and total revenue, provides a manager with critical data on his box office impact and the types of roles that generate the most revenue. This can help him negotiate future deals and determine which projects align with his past successes.
 
 # List all actors who have never worked with Christopher Nolan
 select Actor.firstName, Actor.lastName
@@ -133,9 +119,7 @@ where not exists(select *
 
 <img width="143" alt="Screenshot 2024-10-13 at 5 55 08 PM" src="https://github.com/user-attachments/assets/599f046f-e113-440a-8e42-5174066b5073">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Listing all actors who have never worked with Christopher Nolan can help a manager identify potential new collaborations for future projects. A manager can explore new dynamics and create unique casting opportunities that could appeal to both the director and the audience.
 	
 # List all directors who have directed movies available on more than 1 streaming platforms
 select firstName, lastName, count(distinct Movie_Platform.idStreamingPlatform) as platform_count
@@ -147,9 +131,7 @@ having count(distinct Movie_Platform.idStreamingPlatform) > 1;
 
 <img width="218" alt="Screenshot 2024-10-13 at 5 55 25 PM" src="https://github.com/user-attachments/assets/207051e0-eee9-4acc-9f36-c55323aebea7">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Listing all directors who have movies available on more than one streaming platform is crucial for a manager to assess the reach of a director’s work. It can be assumed that directors with movies on multiple platforms will have higher audience access and potentially views. This increases their market influence and potential for higher viewership.
 
 # Find all workers who have worked with Steven Spielberg in the role of "cinematographer"
 select Worker.firstName, Worker.lastName, Worker.role
@@ -161,9 +143,7 @@ and Worker.role in ("Cinematographer");
 
 <img width="221" alt="Screenshot 2024-10-13 at 5 55 43 PM" src="https://github.com/user-attachments/assets/9f262259-f793-4150-aec0-5d965b5e3599">
 
-Justification: why each query is
-relevant from a managerial perspective (why would a manager be interested in the query
-results?)
+Justification: Finding all workers who have served as cinematographers on Steven Spielberg’s films helps a manager identify top-tier talent in the industry. Knowing which cinematographers have collaborated with Spielberg provides insights into their technical expertise, visual style, and ability to meet the demands of large-scale productions.
 
 # Database Information:
 <img width="1142" alt="Screenshot 2024-10-13 at 7 21 28 PM" src="https://github.com/user-attachments/assets/e4d150a6-5626-4350-94c2-b8c6345bab04">
