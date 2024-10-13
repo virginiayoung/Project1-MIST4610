@@ -2,7 +2,7 @@
 
 # Team Name and Members:
 Primary Keys - 
-Andrew Rhodes (LINK), Cory Abrams, Jack (John) Gallagher, Gracie (Virginia) Young, Logan Miller
+Andrew Rhodes ([LINK](https://github.com/ajr70185/Project1-MIST4610/tree/main)), Cory Abrams, Jack (John) Gallagher, Gracie (Virginia) Young, Logan Miller
 
 # Scenario Description: 
 A description of the scenario that you are modeling describing it in sufficient detail that makes
