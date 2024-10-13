@@ -29,6 +29,7 @@ join Actor as mentee on mentor.idActor = mentee.idMentor
 join Actor_has_Movie as actorMovie on mentee.idActor = actorMovie.idActor
 join Movie as movie on actorMovie.idMovie = movie.idMovie
 where mentor.firstName = 'Leonardo' and mentor.lastName = 'DiCaprio';
+<img width="444" alt="Screenshot 2024-10-13 at 5 52 13 PM" src="https://github.com/user-attachments/assets/0c533dcb-5649-425f-a325-7ef6af12757c">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -40,6 +41,7 @@ from Movie
 join Rating on Movie.idMovie = Rating.idMovie
 group by movieName
 order by average_rating desc;
+<img width="188" alt="Screenshot 2024-10-13 at 5 52 44 PM" src="https://github.com/user-attachments/assets/2f738bf6-9aef-4140-b76d-bc2225b9b74d">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -51,6 +53,7 @@ from Revenue
 join Box_Office on Revenue.idRevenue = Box_Office.idRevenue
 join Movie on Box_Office.idMovie = Movie.idMovie
 group by movieName;
+<img width="365" alt="Screenshot 2024-10-13 at 5 53 05 PM" src="https://github.com/user-attachments/assets/5a216c9d-d392-4195-b986-c947d36b6745">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -65,6 +68,7 @@ join Streaming_Platform on Movie_Platform.idStreamingPlatform = Streaming_Platfo
 where genreName = 'Action'
 group by platformName
 order by movie_count desc;
+<img width="165" alt="Screenshot 2024-10-13 at 5 53 26 PM" src="https://github.com/user-attachments/assets/eb484fa1-79b4-4971-a181-006611dfaf52">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -77,6 +81,7 @@ join Movie on Director.idDirector = Movie.idDirector
 group by Director.idDirector
 having count(Movie.idMovie) > 1
 order by movie_count desc;
+<img width="212" alt="Screenshot 2024-10-13 at 5 53 39 PM" src="https://github.com/user-attachments/assets/d6916f5d-02b6-4aef-9309-fb9b1ae15ef6">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -88,8 +93,9 @@ from Movie
 join Genre on Movie.idGenre = Genre.idGenre
 join Rating on Rating.idMovie = Movie.idMovie
 group by genreName, Movie.idMovie
-having avg(Rating.Score) > 7
+having avg(Rating.Score) > 70
 order by genreName, average_rating desc;
+<img width="250" alt="Screenshot 2024-10-13 at 5 54 37 PM" src="https://github.com/user-attachments/assets/c86ddb29-ce14-4d9b-9289-3f5083529bf5">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -104,6 +110,7 @@ join Box_Office on Movie.idMovie = Box_Office.idMovie
 join Revenue on Revenue.idRevenue = Box_Office.idRevenue
 group by Actor.idActor, movieName, roleName
 having firstName = "Leonardo" and lastName = "DiCaprio";
+<img width="384" alt="Screenshot 2024-10-13 at 5 54 55 PM" src="https://github.com/user-attachments/assets/93a0a360-88fa-448d-8ea2-bb6badcd1da9">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -118,6 +125,7 @@ where not exists(select *
     join Director on Movie.idDirector = Director.idDirector
     where Actor.idActor = Actor_has_Movie.idActor
     and Director.firstName = "Christopher" and Director.lastName = "Nolan");
+<img width="143" alt="Screenshot 2024-10-13 at 5 55 08 PM" src="https://github.com/user-attachments/assets/599f046f-e113-440a-8e42-5174066b5073">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -130,6 +138,7 @@ join Movie on Director.idDirector = Movie.idDirector
 join Movie_Platform on Movie.idMovie = Movie_Platform.idMovie
 group by Director.idDirector
 having count(distinct Movie_Platform.idStreamingPlatform) > 1;
+<img width="218" alt="Screenshot 2024-10-13 at 5 55 25 PM" src="https://github.com/user-attachments/assets/207051e0-eee9-4acc-9f36-c55323aebea7">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
@@ -142,6 +151,7 @@ join Director on Worker.idDirector = Director.idDirector
 where Director.firstName = "Steven"
 and Director.lastName = "Spielberg"
 and Worker.role in ("Cinematographer");
+<img width="221" alt="Screenshot 2024-10-13 at 5 55 43 PM" src="https://github.com/user-attachments/assets/9f262259-f793-4150-aec0-5d965b5e3599">
 
 Justification: why each query is
 relevant from a managerial perspective (why would a manager be interested in the query
