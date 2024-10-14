@@ -5,9 +5,13 @@ Primary Keys -
 Andrew Rhodes ([LINK](https://github.com/ajr70185/Project1-MIST4610/tree/main)), Cory Abrams, Jack (John) Gallagher, Gracie (Virginia) Young, Logan Miller
 
 # Scenario Description: 
-A description of the scenario that you are modeling describing it in sufficient detail that makes
-sense in the context of your data model. This should be reflective of your conversation with
-your group and instructor (if you reach out for help).
+This project involves building a relational database to manage the operations of a movie production and distribution company. At the center of the model is the Movie entity, representing the films produced by the company and distributed across various channels, including theaters and streaming platforms. The database will also track related elements such as actors, directors, revenue, reviews, and ratings.
+The objective is to design an accurate representation of the relationships between these entities, generate sample data to populate the database, and execute queries that provide insights into the performance and public reception of the company's films.
+Our main goal is to monitor the success of films across different distribution channels, analyze audience reception through reviews and aggregate ratings, track box office revenue and analyze financial performance by country, and identify trends in director and actor collaborations, as well as popular genres. 
+Using this data we are able to identify top grossing films by country and genre, determine which streaming platforms are most profitable for each genre, and most importantly analyze the relationship between film reviews/ratings and overall box office success.
+We are hoping that this database can serve as a helpful tool for business analysis and profitability forecasting, and can help companies confidently make decisions backed by data in areas such as production, marketing, and distribution. Our database offers in depth analytics, such as the ability to compare box office performance across multiple countries (which could be helpful in international market campaigns). Additionally, this database could be used to track actors' success across multiple genres, under center directors, and identify who is a star in the industry. 
+Another problem our database solves is consumer engagement. By integrating personalized from customers using data from ratings, reviews, viewing patterns, etc companies are able to boost overall customer satisfaction. 
+
 
 # Data Model:
 ![Data Model UPDATED](https://github.com/user-attachments/assets/ef785fd3-e674-4eb5-92b1-c38aba0b25af)
