@@ -2,7 +2,7 @@
 
 # Team Name and Members:
 Primary Keys - 
-Andrew Rhodes ([LINK](https://github.com/ajr70185/Project1-MIST4610/tree/main)), Cory Abrams, Jack (John) Gallagher, Gracie (Virginia) Young, Logan Miller
+Andrew Rhodes ([LINK](https://github.com/ajr70185/Project1-MIST4610/tree/main)), Cory Abrams, Jack (John) Gallagher, Gracie (Virginia) Young https://github.com/virginiayoung/Project1-MIST4610.git, Logan Miller
 
 # Scenario Description: 
 This project involves building a relational database to manage the operations of a movie production and distribution company. At the center of the model is the Movie entity, representing the films produced by the company and distributed across various channels, including theaters and streaming platforms. The database will also track related elements such as actors, directors, revenue, reviews, and ratings.
