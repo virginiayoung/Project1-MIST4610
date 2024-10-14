@@ -2,7 +2,7 @@
 
 # Team Name and Members:
 Primary Keys - 
-Andrew Rhodes ([LINK](https://github.com/ajr70185/Project1-MIST4610/tree/main)), Cory Abrams, Jack (John) Gallagher, Gracie (Virginia) Young https://github.com/virginiayoung/Project1-MIST4610.git, Logan Miller
+Andrew Rhodes (https://github.com/ajr70185) , Cory Abrams https://github.com/coryabrams, Jack (John) Gallagher https://github.com/jackgallagher15, Gracie (Virginia) Young https://github.com/virginiayoung, Logan Miller https://github.com/lem33453
 
 # Scenario Description: 
 This project involves building a relational database to manage the operations of a movie production and distribution company. At the center of the model is the Movie entity, representing the films produced by the company and distributed across various channels, including theaters and streaming platforms. The database will also track related elements such as actors, directors, revenue, reviews, and ratings.
@@ -14,7 +14,8 @@ Another problem our database solves is consumer engagement. By integrating perso
 
 
 # Data Model:
-![Data Model UPDATED](https://github.com/user-attachments/assets/ef785fd3-e674-4eb5-92b1-c38aba0b25af)
+![DATA MODEL UPDATED 1](https://github.com/user-attachments/assets/a0d932e2-085b-41c5-b968-56acf9c00e92)
+
 
 Explanation: Our main entity is the Movie entity. In here, it stores the attributes that would describe a movie including its ID, the movie name, the release date, and the duration with foreign keys from the Director entity, as well as the Genre entity. There are many movies that has the same director, so this would be a non-identifying one to many relationship. Additionally, there can be many movies with the same genre, so this is also a non-identifying one to many relationship. The Director entity consists of the ID along with the director's name. Off of the Director entity, we have the Worker entity that stores the information of the many workers for each director (non-identifying one to many relationship) whose primary key feeds into the Director table. Next, we have the Actor entity that stores the information of the actors, with their first name and last name. It has a recursive one to many relationship, as many actors can only have one mentor, creating the idMentor foreign key. Additionally, there is a many to many relationship between the Actor and Movie entities, as many different actors can be in many different movies. This creates the Actor_has_Movie table, which stores which actors are in which movies. Moreover, the Movie and Streaming_Platform (which stores its ID and the name of the platform) have a many to many relationship, forming the Movie_Platform entity which stores the movies on each streaming service. We made both sides identifying, creating a composite foreign key in this entity. Moving upwards, we have the Rating table which stores its ID, the source, the score, and the foreign key from the Movie entity, as this is a one to many relationship. This entity is focused on professional reviews from companies and its corresponding rating. Similarly, the Reviews entity tracks the reviews from fans, as well as the foreign key from the Movies entity (since this is a non-identifying one to many relationship). Lastly, we have the Box Office entity that is a non-identifying one to many relationship with Movie, since there is a different Box Office by country. Off of Box Office, there is one more non-dentifying one to many relationship with the Revenue entity, where we can learn more about specific ticket sales per movie, including the amount of tickets sold and ticket price. Overall, this database supports storage of movies and its relating entities.
 
@@ -158,4 +159,5 @@ Justification: Finding all workers who have served as cinematographers on Steven
 
 # Database Information:
 <img width="1142" alt="Screenshot 2024-10-13 at 7 21 28 PM" src="https://github.com/user-attachments/assets/e4d150a6-5626-4350-94c2-b8c6345bab04">
+
 
